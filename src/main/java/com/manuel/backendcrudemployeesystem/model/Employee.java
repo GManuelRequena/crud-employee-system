@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -24,16 +25,20 @@ public class Employee {
     private String email;
 
     @Column(name = "Date_Of_Birth")
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
+
+    @Column(name = "Working_Since")
+    private LocalDate workingSince;
 
     public Employee() {
     }
 
-    public Employee(String firstName, String lastName, String email, Date dateOfBirth) {
+    public Employee(String firstName, String lastName, String email, LocalDate dateOfBirth, LocalDate workingSince) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.dateOfBirth = dateOfBirth;
+        this.workingSince = workingSince;
     }
 
     public Long getId() {
@@ -68,11 +73,19 @@ public class Employee {
         this.email = email;
     }
 
-    public Date getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public LocalDate getWorkingSince() {
+        return workingSince;
+    }
+
+    public void setWorkingSince(LocalDate workingSince) {
+        this.workingSince = workingSince;
     }
 }
