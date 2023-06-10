@@ -6,3 +6,5 @@ It is being build with Java 17.0.4, Swagger 3.0.0, Gradle 7.5.1 and Spring Boot 
 Once you are running the project you can access Swagger by [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html).
 
 It has the basic funtionalities working but I'm still adding more features and docs.
+
+![SwaggerWorking](https://github.com/GManuelRequena/crud-employee-system/assets/48953482/dc47a14f-2fb8-4592-b103-df17aeb138e0)
