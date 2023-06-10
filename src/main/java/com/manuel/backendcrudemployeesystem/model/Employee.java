@@ -1,16 +1,12 @@
 package com.manuel.backendcrudemployeesystem.model;
 
-//import jakarta.persistence.Column;
-//import jakarta.persistence.Entity;
-//import jakarta.persistence.GeneratedValue;
-//import jakarta.persistence.Id;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.time.LocalDate;
-import java.util.Date;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.manuel.backendcrudemployeesystem.config.LocalDateSerializer;
 
 @Entity
 public class Employee {
@@ -29,9 +25,11 @@ public class Employee {
     private String email;
 
     @Column(name = "Date_Of_Birth")
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate dateOfBirth;
 
     @Column(name = "Working_Since")
+    @JsonSerialize(using = LocalDateSerializer.class)
     private LocalDate workingSince;
 
     public Employee() {
