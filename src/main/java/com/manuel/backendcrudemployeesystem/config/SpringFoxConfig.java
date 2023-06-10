@@ -32,7 +32,7 @@ public class SpringFoxConfig {
                 "Some custom description of API.",
                 "1.0.0",
                 "Terms of service",
-                new Contact("Manuel Requena", "www.example.com", "myeaddress@company.com"),
+                new Contact("Manuel Requena", "https://www.linkedin.com/in/GuillermoManuelRequena/", "gmanuelrequena@gmail.com"),
                 "License of API", "API license URL", Collections.emptyList());
     }
 }
